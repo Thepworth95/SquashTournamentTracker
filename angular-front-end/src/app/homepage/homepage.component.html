@@ -1,31 +1,40 @@
 <h2 class="Page-header">Squash Tournemnt Tracker Homepage</h2>
 <h4 class="subtitle">Please register entry</h4>
 <div class="Form-container">
-    <form>
-        <div>
-            <mat-form-field appearance="outline" [formControl]="Firstname">
-                <label>First name</label>
-                <input matInput placeholder="First name">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field appearance="outline" [formControl]="Surname">
-                <label>Surname</label>
-                <input matInput placeholder="Surname">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <mat-label>Year of Graduation</mat-label>
-                <mat-select>
-                  <mat-option *ngFor="let Year of Years" [value]="Year">
-                    {{Year.viewValue}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-        </div>
-        <div>
-              <button>Submit</button>
-        </div>
-    </form>
+    <div class="form">
+        <form>
+            <div class="text-input">
+                <mat-form-field appearance="outline">
+                    <mat-label>First name</mat-label>
+                    <input matInput placeholder="First name">
+                  </mat-form-field>
+            </div>
+            <div class="text-input">
+                <mat-form-field appearance="outline">
+                    <mat-label>Surname</mat-label>
+                    <input matInput placeholder="Surname">
+                  </mat-form-field>
+            </div>
+            <div class="year-select">
+                <mat-form-field>
+                    <mat-label>Year of Graduation</mat-label>
+                    <br>
+                    <mat-select>
+                        <mat-option *ngFor="let Year of Years" [value]="Year">
+                            {{Year.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <br>
+            <div class="Submit-Button-container">
+                <button mat-raised-button color="accent" class="sibmit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="Entries-button">
+    <button mat-raised-button class="entries-list">check entries</button>
+    <br>
+    <button mat-raised-button class="tournament-genorator">Begin Tournament setup</button>
+    </div>
 </div>

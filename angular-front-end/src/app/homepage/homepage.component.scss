@@ -1,5 +1,24 @@
 .Form-container{
     text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    .form{ 
+        width: 100%;
+        
+    }
+}
+
+.Button{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+mat-form-field{
+    display: inline;
+
 }
 
 .Page-header{
@@ -8,4 +27,32 @@
 
 .subtitle{
     text-align: center;
+}
+
+.text-input{
+    width: auto;
+    padding: 5px;
+}
+
+.year-select{
+    width: auto;
+    padding: 5px;
+}
+
+.Entries-button{
+    display: grid;
+    grid-template-columns: 49.5% 1% 49.5%;
+    padding: 5px;
+}
+
+.entries-list{
+    background-color: red;
+}
+
+.tournament-genorator{
+    background-color: red;
+}
+
+.sibmit-button{
+    background-color: red;
 }
