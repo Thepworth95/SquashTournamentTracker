@@ -3,30 +3,33 @@
     justify-content: center;
     flex-direction: row;
     background-color: white;
-    margin-left: 25%;
-    margin-right: 25%;
+    color: black;
+    margin-left: 35%;
+    margin-right: 35%;
     .form{ 
         width: 100%;
         
     }
 }
 
-.Button{
-    display: grid;
-    grid-template-columns: 100%;
+.Submit-Button-container{
+    padding: 5px;
+    padding-bottom: 0px;
+    color: white;
 }
 
 mat-form-field{
     display: inline;
-
 }
 
 .Page-header{
     text-align: center;
+    color: white;
 }
 
 .subtitle{
     text-align: center;
+    color: white;
 }
 
 .text-input{
@@ -37,22 +40,37 @@ mat-form-field{
 .year-select{
     width: auto;
     padding: 5px;
+    border: black;
 }
 
 .Entries-button{
     display: grid;
     grid-template-columns: 49.5% 1% 49.5%;
     padding: 5px;
+    color: white;
 }
 
 .entries-list{
-    background-color: red;
+    background-color: #c71313;
+    color: white;
 }
 
 .tournament-genorator{
-    background-color: red;
+    background-color: #c71313;
+    color: white;
 }
 
-.sibmit-button{
-    background-color: red;
+.submit-button{
+    background-color: #c71313;
+    width: 100%;
+    color: white;
+}
+
+.space-in-toolbar{
+    width: 15px;
+}
+
+.toolbar{
+    background-color: black;
+    color: white;
 }

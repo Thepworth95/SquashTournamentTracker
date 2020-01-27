@@ -50,6 +50,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import { RegisteredPlayersComponent } from './registered-players/registered-players.component';
+import { PlayerComponent } from './registered-players/player/player.component';
+import { TournementPageComponent } from './tournement-page/tournement-page.component';
+import { GroupComponent } from './tournement-page/group/group.component';
+
+
 
 
 
@@ -57,7 +63,11 @@ import {MatTreeModule} from '@angular/material/tree';
   declarations: [
     AppComponent,
     HomepageComponent,
-    TournementGenoratorComponent
+    TournementGenoratorComponent,
+    RegisteredPlayersComponent,
+    PlayerComponent,
+    TournementPageComponent,
+    GroupComponent,
     ],
   imports: [
     BrowserModule,
@@ -109,8 +119,7 @@ import {MatTreeModule} from '@angular/material/tree';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule,
-    MatSidenavModule
+    ScrollingModule
   ],
   exports: [
     FormsModule,
@@ -160,8 +169,7 @@ import {MatTreeModule} from '@angular/material/tree';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule,
-    MatSidenavModule
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
