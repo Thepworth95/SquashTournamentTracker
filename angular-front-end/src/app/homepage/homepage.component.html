@@ -1,11 +1,11 @@
 <mat-toolbar class="toolbar">
     <img src="src/assets/squashImage.jpg">
     <span class="space-in-toolbar"> </span>
-    <h2 onclick="">HOME</h2>
+    <h2 routerLink="/home" routerLinkActive="active">Home</h2>
     <span class="space-in-toolbar"> </span>
-    <h3>PLAYERS</h3>
+    <h3 routerLink="/players" routerLinkActive="active">Players</h3>
     <span class="space-in-toolbar"> </span>
-    <h3>TOURNAMENT</h3>
+    <h3 routerLink="/tournement" routerLinkActive="active">tournement</h3>
   </mat-toolbar>
 <h2 class="Page-header">Squash Tournemnt Tracker Homepage</h2>
 <h4 class="subtitle">Please register entry</h4>
@@ -45,8 +45,8 @@
         </form>
     </div>
     <div class="Entries-button">
-        <button mat-raised-button class="entries-list">check entries</button>
+        <button mat-raised-button class="entries-list" routerLink="/players" routerLinkActive="active">Check entries</button>
         <br>
-        <button mat-raised-button class="tournament-genorator">Begin/Setup Tournament</button>
+        <button mat-raised-button class="tournament-genorator" routerLink="/generator" routerLinkActive="active">Begin/Setup Tournament</button>
     </div>
 </div>

@@ -54,6 +54,7 @@ import { RegisteredPlayersComponent } from './registered-players/registered-play
 import { PlayerComponent } from './registered-players/player/player.component';
 import { TournementPageComponent } from './tournement-page/tournement-page.component';
 import { GroupComponent } from './tournement-page/group/group.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -119,7 +120,8 @@ import { GroupComponent } from './tournement-page/group/group.component';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    BrowserAnimationsModule
   ],
   exports: [
     FormsModule,
@@ -169,7 +171,8 @@ import { GroupComponent } from './tournement-page/group/group.component';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

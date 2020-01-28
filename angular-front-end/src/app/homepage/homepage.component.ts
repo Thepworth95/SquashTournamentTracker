@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 export interface Year {
   value: number;
@@ -30,6 +31,7 @@ export class HomepageComponent implements OnInit {
     {value: 2019, viewValue: '2019'},
     {value: 2020, viewValue: '2020'},
   ];
+  router: Router;
 
   constructor() { }
 
