@@ -55,7 +55,7 @@ import { PlayerComponent } from './registered-players/player/player.component';
 import { TournementPageComponent } from './tournement-page/tournement-page.component';
 import { GroupComponent } from './tournement-page/group/group.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {NgTournamentTreeModule} from 'ng-tournament-tree';
 
 
 
@@ -172,7 +172,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgTournamentTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

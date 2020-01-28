@@ -28,11 +28,9 @@
                 </mat-form-field>
             </div>
             <div class="year-select">
-                <mat-form-field>
-                    <mat-label>Year of Graduation</mat-label>
-                    <br>
-                    <mat-select>
-                        <mat-option *ngFor="let Year of Years" [value]="Year">
+                <mat-form-field class="fromField">
+                    <mat-select class="year-option-select-box">
+                        <mat-option class="year-option" *ngFor="let Year of Years" [value]="Year">
                             {{Year.viewValue}}
                         </mat-option>
                     </mat-select>
