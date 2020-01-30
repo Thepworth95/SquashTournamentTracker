@@ -1,4 +1,4 @@
-package com.qa.projectbackend.playerControler;
+package com.qa.projectbackend.Controlers;
 
 public class playersControler {
 

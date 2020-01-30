@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 @include mat-core();
+@import '~ng-tournament-tree/styles/ngtt-styles';
 
 body{
     background: #c71313;

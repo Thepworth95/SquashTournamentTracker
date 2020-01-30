@@ -56,6 +56,7 @@ import { TournementPageComponent } from './tournement-page/tournement-page.compo
 import { GroupComponent } from './tournement-page/group/group.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgTournamentTreeModule} from 'ng-tournament-tree';
+import { KnockoutComponent } from './tournement-page/knockout/knockout.component';
 
 
 
@@ -69,6 +70,7 @@ import {NgTournamentTreeModule} from 'ng-tournament-tree';
     PlayerComponent,
     TournementPageComponent,
     GroupComponent,
+    KnockoutComponent,
     ],
   imports: [
     BrowserModule,
