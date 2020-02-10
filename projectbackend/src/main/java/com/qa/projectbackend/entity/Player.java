@@ -33,7 +33,7 @@ public class Player {
     @Column(name = "games")
     private int games;
 
-
+    public Player() {};
 
     public Player(String firstName, String surname, int graduationYear) {
         this.firstName = firstName;

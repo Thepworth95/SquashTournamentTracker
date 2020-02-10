@@ -34,4 +34,6 @@ public class PlayersControler {
         return ResponseEntity.ok(playerService.getPlayer(firstName));
     }
 
+    
+
 }

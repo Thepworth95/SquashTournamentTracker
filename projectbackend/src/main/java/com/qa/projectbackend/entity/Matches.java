@@ -10,10 +10,12 @@ public class Matches {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name = "player1", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "player1")
     private Player player1;
 
-    @Column(name = "player1", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "player2")
     private Player player2;
 
     @Column(name = "p1score")
@@ -22,15 +24,21 @@ public class Matches {
     @Column(name = "p2score")
     private int p2score;
 
-    @Column(name = "winner")
+    @ManyToOne
+    @JoinColumn(name = "winner")
     private Player winner;
 
-    @Column(name = "looser")
+    @ManyToOne
+    @JoinColumn(name = "looser")
     private Player looser;
 
-    public Matches(Player player1, Player player2) {
+    @Column(name = "groupgame")
+    private boolean groupgame;
+
+    public Matches(Player player1, Player player2, Boolean groupgame) {
         this.player1 = player1;
         this.player2 = player2;
+        this.groupgame = groupgame;
     }
 
     public int getId() {
@@ -83,5 +91,13 @@ public class Matches {
 
     public void setLooser(Player looser) {
         this.looser = looser;
+    }
+
+    public boolean isGroupgame() {
+        return groupgame;
+    }
+
+    public void setGroupgame(boolean groupgame) {
+        this.groupgame = groupgame;
     }
 }
