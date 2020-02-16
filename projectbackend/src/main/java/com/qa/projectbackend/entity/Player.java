@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "players")
 public class Player {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "firstname", nullable = false)
@@ -33,13 +33,25 @@ public class Player {
     @Column(name = "games")
     private int games;
 
-    public Player() {};
-
-    public Player(String firstName, String surname, int graduationYear) {
-        this.firstName = firstName;
-        this.surname = surname;
-        this.graduationYear = graduationYear;
-    }
+//    public Player() {
+//    }
+//
+//    public Player(String firstName, String surname, int graduationYear) {
+//        this.firstName = firstName;
+//        this.surname = surname;
+//        this.graduationYear = graduationYear;
+//    }
+//
+//    public Player(String firstName, String surname, int graduationYear, int group, int matches, int wins, int losses, int games) {
+//        this.firstName = firstName;
+//        this.surname = surname;
+//        this.graduationYear = graduationYear;
+//        this.group = group;
+//        this.matches = matches;
+//        this.wins = wins;
+//        this.losses = losses;
+//        this.games = games;
+//    }
 
     public int getId() {
         return id;
@@ -76,4 +88,20 @@ public class Player {
     public void setGroup(int group) {
         this.group = group;
     }
+
+    public int getMatches() { return matches; }
+
+    public void setMatches(int matches) { this.matches = matches; }
+
+    public int getWins() { return wins; }
+
+    public void setWins(int wins) { this.wins = wins; }
+
+    public int getLosses() { return losses; }
+
+    public void setLosses(int losses) { this.losses = losses; }
+
+    public int getGames() { return games; }
+
+    public void setGames(int games) { this.games = games; }
 }

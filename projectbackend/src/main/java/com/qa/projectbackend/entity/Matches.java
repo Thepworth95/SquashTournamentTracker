@@ -41,6 +41,10 @@ public class Matches {
         this.groupgame = groupgame;
     }
 
+    public Matches() {
+
+    }
+
     public int getId() {
         return id;
     }

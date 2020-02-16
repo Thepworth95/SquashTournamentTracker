@@ -8,7 +8,6 @@ import { MatNativeDateModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpModule } from '@angular/http';
 import {MatSelectModule} from '@angular/material/select';
-import { TournementGenoratorComponent } from './tournement-genorator/tournement-genorator.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -55,15 +54,10 @@ import { TournementPageComponent } from './tournement-page/tournement-page.compo
 import { GroupComponent } from './tournement-page/group/group.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgTournamentTreeModule} from 'ng-tournament-tree';
-import { TournementKnockoutComponent } from './tournement-knockout/tournement-knockout.component';
 import { GroupFixturesComponent } from './group-fixtures/group-fixtures.component';
 import { GroupResultsComponent } from './group-results/group-results.component';
-import { KnockoutFixturesComponent } from './knockout-fixtures/knockout-fixtures.component';
-import { KnockoutResultsComponent } from './knockout-results/knockout-results.component';
 import { GfixturesComponent } from './group-fixtures/fixtures/gfixtures.component';
 import { GresultsComponent } from './group-results/gresults/gresults.component';
-import { KofixturesComponent } from './knockout-fixtures/kofixtures/kofixtures.component';
-import { KoresultsComponent } from './knockout-results/koresults/koresults.component';
 
 
 
@@ -72,20 +66,14 @@ import { KoresultsComponent } from './knockout-results/koresults/koresults.compo
   declarations: [
     AppComponent,
     HomepageComponent,
-    TournementGenoratorComponent,
     RegisteredPlayersComponent,
     PlayerComponent,
     TournementPageComponent,
     GroupComponent,
-    TournementKnockoutComponent,
     GroupFixturesComponent,
     GroupResultsComponent,
-    KnockoutFixturesComponent,
-    KnockoutResultsComponent,
     GfixturesComponent,
     GresultsComponent,
-    KofixturesComponent,
-    KoresultsComponent,
     ],
   imports: [
     BrowserModule,
