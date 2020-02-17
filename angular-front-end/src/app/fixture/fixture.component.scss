@@ -1,0 +1,87 @@
+.Form-container{
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    margin-left: 30%;
+    margin-right: 30%;
+    .form{ 
+        width: 100%;
+        
+    }
+}
+
+.Submit-Button-container{
+    padding: 5px;
+    padding-bottom: 0px;
+    color: white;
+}
+
+mat-form-field{
+    display: inline;
+}
+
+.Page-header{
+    text-align: center;
+    color: white;
+}
+
+.subtitle{
+    text-align: center;
+    color: white;
+}
+
+.text-input{
+    width: auto;
+    padding: 5px;
+}
+
+.year-select{
+    width: auto;
+    padding: 5px;
+    border: black;
+}
+
+.Entries-button{
+    display: grid;
+    grid-template-columns: 49.5% 1% 49.5%;
+    padding: 5px;
+    color: white;
+}
+
+.entries-list{
+    background-color: #c71313;
+    color: white;
+}
+
+.tournament-genorator{
+    background-color: #c71313;
+    color: white;
+}
+
+.submit-button{
+    background-color: #c71313;
+    width: 100%;
+    color: white;
+}
+
+.space-in-toolbar{
+    width: 15px;
+}
+
+.toolbar{
+    background-color: black;
+    color: white;
+}
+
+.year-option{
+    background: white;
+    width: 100%;
+    padding: 0px;
+}
+
+.year-option-select-box{
+    padding: 4%;
+    width: 92%;
+}

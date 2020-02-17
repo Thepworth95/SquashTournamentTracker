@@ -5,6 +5,7 @@ import { RegisteredPlayersComponent } from './registered-players/registered-play
 import { TournementPageComponent } from './tournement-page/tournement-page.component';
 import { GroupFixturesComponent } from './group-fixtures/group-fixtures.component';
 import { GroupResultsComponent } from './group-results/group-results.component';
+import { FixtureComponent } from './fixture/fixture.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'fixtures',
     component: GroupFixturesComponent
+  },
+  {
+    path: 'fixture/{id}',
+    component: FixtureComponent
   },
   {
     path: 'results',

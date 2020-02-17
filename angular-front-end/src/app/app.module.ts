@@ -56,8 +56,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgTournamentTreeModule} from 'ng-tournament-tree';
 import { GroupFixturesComponent } from './group-fixtures/group-fixtures.component';
 import { GroupResultsComponent } from './group-results/group-results.component';
-import { GfixturesComponent } from './group-fixtures/fixtures/gfixtures.component';
 import { GresultsComponent } from './group-results/gresults/gresults.component';
+import { FixtureComponent } from './fixture/fixture.component';
 
 
 
@@ -72,8 +72,8 @@ import { GresultsComponent } from './group-results/gresults/gresults.component';
     GroupComponent,
     GroupFixturesComponent,
     GroupResultsComponent,
-    GfixturesComponent,
     GresultsComponent,
+    FixtureComponent,
     ],
   imports: [
     BrowserModule,
