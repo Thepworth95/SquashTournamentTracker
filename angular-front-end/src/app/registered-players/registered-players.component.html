@@ -13,4 +13,4 @@
 
 
 
-<app-player *ngFor="let player of players"></app-player>
+<app-player *ngFor="let player of players?.results" [person]="player"></app-player>

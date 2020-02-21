@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import {PlayersService} from 'src/app/players.service';
+import { Player } from '../entity.model';
 @Component({
   selector: 'app-registered-players',
   templateUrl: './registered-players.component.html',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisteredPlayersComponent implements OnInit {
 
-  constructor() { }
+  public players: Player[];
+
+  constructor(
+    private playerService: PlayersService,
+    private router: Router
+  ) { }
+
 
   ngOnInit() {
+
+    this.playerService.getAllPlayers().subscribe((player)=> {
+      this.players = player
+    })
+
   }
 
 }

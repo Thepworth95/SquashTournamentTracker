@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatchesService } from 'src/app/matches.service';
+import { Router } from '@angular/router';
+import { Match } from '../entity.model';
 
 @Component({
   selector: 'app-group-fixtures',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupFixturesComponent implements OnInit {
 
-  constructor() { }
+  private match: Match;
+  private matches: Match[];
+
+  constructor(
+    private matchesService: MatchesService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
-  }
+    this.matchesService.getAllMatches().subscribe((match) => {
+      this.matches = match
+    })
 
+
+  }
 }

@@ -11,5 +11,4 @@ import java.util.Optional;
 @Repository
 public interface PersonRepository extends JpaRepository<Player, Integer> {
 
-    Player getByfirstName(String name);
 }

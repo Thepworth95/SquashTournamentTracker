@@ -10,15 +10,15 @@ public class Player {
     private int id;
 
     @Column(name = "firstname", nullable = false)
-    private String firstName;
+    private String firstname;
 
     @Column(name = "surname", nullable = false)
     private String surname;
 
     @Column(name = "graduationyear", nullable = false)
-    private int graduationYear;
+    private int graduationyear;
 
-    @Column(name = "group")
+    @Column(name = "`group`")
     private int group;
 
     @Column(name = "matches")
@@ -58,11 +58,11 @@ public class Player {
     }
 
     public String getFirstName() {
-        return firstName;
+        return firstname;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstname = firstName;
     }
 
     public String getSurname() {
@@ -74,11 +74,11 @@ public class Player {
     }
 
     public int getGraduationYear() {
-        return graduationYear;
+        return graduationyear;
     }
 
     public void setGraduationYear(int graduationYear) {
-        this.graduationYear = graduationYear;
+        this.graduationyear = graduationYear;
     }
 
     public int getGroup() {

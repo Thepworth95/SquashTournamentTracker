@@ -2,11 +2,11 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { HttpModule } from '@angular/http';
+import {HomepageComponent} from './homepage/homepage.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {HttpModule} from '@angular/http';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {A11yModule} from '@angular/cdk/a11y';
@@ -48,16 +48,16 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import { RegisteredPlayersComponent } from './registered-players/registered-players.component';
-import { PlayerComponent } from './registered-players/player/player.component';
-import { TournementPageComponent } from './tournement-page/tournement-page.component';
-import { GroupComponent } from './tournement-page/group/group.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RegisteredPlayersComponent} from './registered-players/registered-players.component';
+import {TournementPageComponent} from './tournement-page/tournement-page.component';
+import {GroupComponent} from './tournement-page/group/group.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgTournamentTreeModule} from 'ng-tournament-tree';
-import { GroupFixturesComponent } from './group-fixtures/group-fixtures.component';
-import { GroupResultsComponent } from './group-results/group-results.component';
-import { GresultsComponent } from './group-results/gresults/gresults.component';
-import { FixtureComponent } from './fixture/fixture.component';
+import {GroupFixturesComponent} from './group-fixtures/group-fixtures.component';
+import {GroupResultsComponent} from './group-results/group-results.component';
+import {HttpClientModule} from '@angular/common/http';
+import {PlayerComponent} from './registered-players/player/player.component';
+import {ResultComponent} from './group-results/result/result.component';
 
 
 
@@ -72,8 +72,7 @@ import { FixtureComponent } from './fixture/fixture.component';
     GroupComponent,
     GroupFixturesComponent,
     GroupResultsComponent,
-    GresultsComponent,
-    FixtureComponent,
+    ResultComponent,
     ],
   imports: [
     BrowserModule,
@@ -126,7 +125,9 @@ import { FixtureComponent } from './fixture/fixture.component';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    
   ],
   exports: [
     FormsModule,
@@ -178,9 +179,11 @@ import { FixtureComponent } from './fixture/fixture.component';
     PortalModule,
     ScrollingModule,
     BrowserAnimationsModule,
-    NgTournamentTreeModule
+    NgTournamentTreeModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

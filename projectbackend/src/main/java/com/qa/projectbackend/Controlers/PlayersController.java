@@ -9,16 +9,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping(path = "/players")
-public class PlayersControler {
+public class PlayersController {
 
     private PlayerService playerService;
 
-    private PlayersControler (@Autowired PlayerService playerService) {
+    private PlayersController(@Autowired PlayerService playerService) {
         this.playerService = playerService;
     }
 
@@ -33,9 +34,18 @@ public class PlayersControler {
         return ResponseEntity.status(HttpStatus.CREATED).body(newplayer);
     }
 
-    @GetMapping(path = "/get/{firstName}")
-    public ResponseEntity<Player> getPlayer(@PathVariable("firstName") String firstName) {
-        return ResponseEntity.ok(playerService.getPlayer(firstName));
+    @GetMapping(path = "/get/{id}")
+    public ResponseEntity<Optional<Player>> getPlayer(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(playerService.getPlayer(id));
     }
 
+    @PutMapping(path = "/update/{id}")
+    public ResponseEntity<Optional<Player>> updatePlayer(@PathVariable("id") Integer id, @RequestBody Player player) {
+        return ResponseEntity.ok(playerService.updatePlayer(id, player));
+    }
+
+    @DeleteMapping(path = "delete/{id}")
+    public ResponseEntity<Integer> deletePlayer(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok().body(playerService.deletePlayer(id));
+    }
 }
