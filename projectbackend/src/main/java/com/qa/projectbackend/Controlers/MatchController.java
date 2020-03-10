@@ -1,9 +1,7 @@
 package com.qa.projectbackend.Controlers;
 
 import com.qa.projectbackend.entity.Matches;
-import com.qa.projectbackend.entity.Player;
 import com.qa.projectbackend.services.MatchesService;
-import com.qa.projectbackend.services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,12 +34,22 @@ public class MatchController {
 
     @GetMapping(path = "/get/{id}")
     public ResponseEntity<Optional<Matches>> getMatch(@PathVariable("id") Integer id) {
-        return ResponseEntity.ok(matchesService.getMatch(id));
+        Optional<Matches> existingMatch = this.matchesService.getMatch(id);
+        if (existingMatch.isPresent()) {
+            return ResponseEntity.ok(existingMatch);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PutMapping(path = "/update/{id}")
     public ResponseEntity<Optional<Matches>> updateMatch(@PathVariable("id") Integer id, @RequestBody Matches match) {
-        return ResponseEntity.ok(matchesService.updateMatch(id, match));
+        Optional<Matches> updatedMatch = this.matchesService.updateMatch(id, match);
+        if (updatedMatch.isPresent()) {
+            return ResponseEntity.ok(updatedMatch);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping(path = "delete/{id}")

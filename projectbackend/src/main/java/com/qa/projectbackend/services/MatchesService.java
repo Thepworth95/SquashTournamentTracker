@@ -34,13 +34,12 @@ public class MatchesService {
 
     public Optional<Matches> updateMatch(Integer id, Matches match) {
         return matchRepository.findById(id).map(updatedMatch -> {
-            updatedMatch.setPlayer1(match.getPlayer1());
-            updatedMatch.setPlayer2(match.getPlayer2());
+            if (match.getPlayer1() != null) { updatedMatch.setPlayer1(match.getPlayer1()); }
+            if (match.getPlayer2() != null) { updatedMatch.setPlayer2(match.getPlayer2()); }
             updatedMatch.setP1score(match.getP1score());
             updatedMatch.setP2score(match.getP2score());
-            updatedMatch.setWinner(match.getWinner());
-            updatedMatch.setLooser(match.getLooser());
-            updatedMatch.setGroupgame(match.isGroupgame());
+            if (match.getWinner() != null) { updatedMatch.setWinner(match.getWinner()); }
+            if (match.getLooser() != null) { updatedMatch.setLooser(match.getLooser()); }
             return matchRepository.save(updatedMatch);
         });
     }

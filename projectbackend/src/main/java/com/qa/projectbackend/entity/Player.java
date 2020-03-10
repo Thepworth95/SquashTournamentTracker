@@ -33,29 +33,12 @@ public class Player {
     @Column(name = "games")
     private int games;
 
-//    public Player() {
-//    }
-//
-//    public Player(String firstName, String surname, int graduationYear) {
-//        this.firstName = firstName;
-//        this.surname = surname;
-//        this.graduationYear = graduationYear;
-//    }
-//
-//    public Player(String firstName, String surname, int graduationYear, int group, int matches, int wins, int losses, int games) {
-//        this.firstName = firstName;
-//        this.surname = surname;
-//        this.graduationYear = graduationYear;
-//        this.group = group;
-//        this.matches = matches;
-//        this.wins = wins;
-//        this.losses = losses;
-//        this.games = games;
-//    }
 
     public int getId() {
         return id;
     }
+
+    public void setId(int id) { this.id = id; }
 
     public String getFirstName() {
         return firstname;

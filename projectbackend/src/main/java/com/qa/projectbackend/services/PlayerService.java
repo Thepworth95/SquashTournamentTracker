@@ -1,7 +1,7 @@
 package com.qa.projectbackend.services;
 
 import com.qa.projectbackend.entity.Player;
-import com.qa.projectbackend.repository.PersonRepository;
+import com.qa.projectbackend.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,43 +11,42 @@ import java.util.Optional;
 @Service
 public class PlayerService {
 
-    private PersonRepository personRepository;
+    private PlayerRepository playerRepository;
 
-    public PlayerService(@Autowired PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    public PlayerService(@Autowired PlayerRepository playerRepository) {
+        this.playerRepository = playerRepository;
     }
 
     public List<Player> getAllPlayers() {
-        List<Player> allPlayersList = (List<Player>) personRepository.findAll();
-        return allPlayersList;
+        return (List<Player>) playerRepository.findAll();
     }
 
     public Player addPlayer(Player player) {
-       personRepository.save(player);
+       playerRepository.save(player);
        return player;
     }
 
     public Optional<Player> getPlayer(Integer id) {
-        return personRepository.findById(id);
+        return playerRepository.findById(id);
     }
 
 
     public Optional<Player> updatePlayer(Integer id, Player player) {
-        return personRepository.findById(id).map(user -> {
-            user.setFirstName(player.getFirstName());
-            user.setSurname(player.getSurname());
-            user.setGraduationYear(player.getGraduationYear());
-            user.setGroup(player.getGroup());
-            user.setMatches(player.getMatches());
-            user.setWins(player.getWins());
-            user.setLosses(player.getLosses());
-            user.setGames(player.getGames());
-            return personRepository.save(user);
+        return playerRepository.findById(id).map(updatedPlayer -> {
+            if (player.getFirstName() != null) { updatedPlayer.setFirstName(player.getFirstName()); }
+            if (player.getSurname() != null) { updatedPlayer.setSurname(player.getSurname()); }
+            updatedPlayer.setGraduationYear(updatedPlayer.getGraduationYear());
+            updatedPlayer.setGroup(player.getGroup());
+            updatedPlayer.setMatches(player.getMatches());
+            updatedPlayer.setWins(player.getWins());
+            updatedPlayer.setLosses(player.getLosses());
+            updatedPlayer.setGames(player.getGames());
+            return playerRepository.save(updatedPlayer);
         });
     }
 
     public Integer deletePlayer(Integer id) {
-        personRepository.deleteById(id);
+        playerRepository.deleteById(id);
         return id;
     }
 }

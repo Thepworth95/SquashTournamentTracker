@@ -49,6 +49,8 @@ public class Matches {
         return id;
     }
 
+    public void setId(int id) { this.id = id; }
+
     public Player getPlayer1() {
         return player1;
     }

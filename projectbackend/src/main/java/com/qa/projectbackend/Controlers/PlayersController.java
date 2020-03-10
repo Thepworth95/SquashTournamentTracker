@@ -36,12 +36,23 @@ public class PlayersController {
 
     @GetMapping(path = "/get/{id}")
     public ResponseEntity<Optional<Player>> getPlayer(@PathVariable("id") Integer id) {
-        return ResponseEntity.ok(playerService.getPlayer(id));
+        Optional<Player> existingPlayer = this.playerService.getPlayer(id);
+        if (existingPlayer.isPresent()) {
+            return ResponseEntity.ok(existingPlayer);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+
     }
 
     @PutMapping(path = "/update/{id}")
     public ResponseEntity<Optional<Player>> updatePlayer(@PathVariable("id") Integer id, @RequestBody Player player) {
-        return ResponseEntity.ok(playerService.updatePlayer(id, player));
+        Optional<Player> updatedPlayer = this.playerService.updatePlayer(id, player);
+        if (updatedPlayer.isPresent()) {
+            return ResponseEntity.ok(updatedPlayer);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping(path = "delete/{id}")
