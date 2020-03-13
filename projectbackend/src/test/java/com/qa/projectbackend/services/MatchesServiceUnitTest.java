@@ -34,7 +34,7 @@ public class MatchesServiceUnitTest {
 
         Mockito.when(this.matchRepository.findAll()).thenReturn(matches);
 
-        assertThat(this.matchesService.getAllMatches()).isEqualTo(match);
+        assertThat(this.matchesService.getAllMatches()).isEqualTo(matches);
     }
 
     @Test
